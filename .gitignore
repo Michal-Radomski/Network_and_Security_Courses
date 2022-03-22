@@ -6,3 +6,6 @@ yarn-debug.log*
 
 # dotenv environment variables file
 .env
+
+## My Entries
+.vscode/
