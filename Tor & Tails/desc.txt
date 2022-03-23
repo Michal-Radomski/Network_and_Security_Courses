@@ -5,3 +5,11 @@ obfs4 46.128.93.192:7346 5D28B8E1D117B8720D56A8513CF32509DCA1D84F cert=ED6tZP50e
 
 Tor check:
 https://check.torproject.org
+
+Search Engines:
+duckduckgo.com - https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/
+NotEvil hss3uro2hsxfogfq.onion/ (Down now)
+Alternative to NotEvil Phobos - http://phobosxilamwcg75xt22id7aywkzol6q6rfl2flipcqoc4e4ahima5id.onion/
+
+torch http://xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion/
+ahmia - juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion/
