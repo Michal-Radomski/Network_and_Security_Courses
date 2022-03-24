@@ -25,3 +25,23 @@ Others:
 hidden answers answerstedhctbek.onion
 dread - reddit http://dreadditevelidot.onion/
 privacy sub reddit - https://www.reddit.com/r/privacy/
+
+Other methods:
+Fake ID generator
+http://elfq2qefxx6dv3vy.onion/fakeid.php (not working)
+
+Temp Email Accounts
+
+Privacy focused accounts:
+https://protonmail.com
+
+DarkNet Emails Providers:
+temp mail - http://grrmailb3fxpjbwm.onion/
+Proton Mail - https://protonmail.com/ OR https://protonirockerxow.onion/login
+torbox - http://torbox3uiot6wchz.onion/
+elude - http://eludemaillhqfkh5.onion/
+Riseup - http://nzh3fv6jc6jskki3.onion
+mail2tor - http://mail2tor2zyjdctd.onion/
+
+Full list (keep in mind links might not work, if they don't then look for the service name in search engines or in link directories)
+https://www.reddit.com/r/onions/comments/6krt34/list_of_onion_email_providers/
