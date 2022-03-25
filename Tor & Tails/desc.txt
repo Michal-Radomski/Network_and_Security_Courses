@@ -55,3 +55,6 @@ https://gist.github.com/dllud/a46d4a555e31dfeff6ad41dcf20729ac
 
 File Sharing:
 https://onionshare.org/
+
+Encryption:
+eg. seahorse app
