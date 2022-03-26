@@ -58,3 +58,11 @@ https://onionshare.org/
 
 Encryption:
 eg. seahorse app
+
+BitCoin:
+https://www.coinbase.com
+
+BitCoin Mixers:
+https://bitcoin-laundry.com/
+https://bitmix.biz/en - http://bitmixbizymuphkc.onion
+https://mixtum.io/ - mixtum5lbuslyow2.onion
