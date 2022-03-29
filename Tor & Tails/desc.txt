@@ -80,3 +80,5 @@ GPG Tutorial: https://www.youtube.com/watch?v=1vVIpIvboSg
 GPG Tutorial: https://www.youtube.com/watch?v=4bbyMEuTW7Y
 
 Virtual Machines tutorial: https://www.youtube.com/watch?v=wX75Z-4MEoM
+
+Tor: use HTTPS and switch off JS
