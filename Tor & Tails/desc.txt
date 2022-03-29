@@ -72,3 +72,9 @@ https://moneroworld.com/#nodes
 https://www.morphtoken.com
 
 Qubes:
+https://www.qubes-os.org
+
+Addons:
+PGP Tutorial: https://www.youtube.com/watch?v=CEADq-B8KtI
+GPG Tutorial: https://www.youtube.com/watch?v=1vVIpIvboSg
+GPG Tutorial: https://www.youtube.com/watch?v=4bbyMEuTW7Y
