@@ -1,0 +1,46 @@
+OAuth 2.0, OpenID Connect (OIDC), and JSON Web Tokens (JWT) are essential components of modern authentication and authorization frameworks, but they serve different purposes and function in distinct ways.
+
+## OAuth 2.0
+
+**Definition**: OAuth 2.0 is an authorization framework that allows third-party applications to access a user's resources without sharing their credentials. It defines how tokens are issued and managed for authorizing access to resources.
+
+**Key Features**:
+- **Authorization Grant Types**: OAuth 2.0 supports various methods for obtaining access tokens, such as authorization code, implicit, resource owner password credentials, and client credentials.
+- **Access Tokens**: These tokens are used to gain access to protected resources on behalf of the user.
+- **Delegated Access**: Users can grant limited access to their resources on one site to another application without sharing their passwords.
+
+## OpenID Connect (OIDC)
+
+**Definition**: OpenID Connect is an authentication layer built on top of OAuth 2.0 that provides a way to verify the identity of users based on the authentication performed by an authorization server.
+
+**Key Features**:
+- **ID Token**: OIDC introduces an ID token, which is typically a JWT that contains information about the authenticated user.
+- **User Authentication**: While OAuth 2.0 handles authorization, OIDC adds the capability to authenticate users, allowing applications to confirm user identities.
+- **Single Sign-On (SSO)**: OIDC facilitates SSO across different applications by standardizing how identity information is exchanged.
+
+## JSON Web Tokens (JWT)
+
+**Definition**: JWT is a compact, URL-safe means of representing claims to be transferred between two parties. It is often used in conjunction with OAuth 2.0 and OIDC as a token format.
+
+**Key Features**:
+- **Token Structure**: A JWT consists of three parts: header, payload (claims), and signature. This structure allows for secure transmission of information.
+- **Self-Contained Tokens**: JWTs can carry all necessary information for authentication and authorization, reducing the need for server-side session storage.
+- **Versatile Usage**: While JWTs are commonly used as access tokens in OAuth 2.0 and ID tokens in OIDC, they can also be used independently for various purposes.
+
+## Comparison
+
+| Aspect                | OAuth 2.0                                     | OpenID Connect                                | JWT                                           |
+|-----------------------|------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| **Purpose**           | Authorization framework                        | Authentication layer                          | Token format                                  |
+| **Token Type**        | Access tokens                                  | ID tokens (typically JWT)                     | JSON-based token                              |
+| **Functionality**     | Grants access to resources                     | Confirms user identity                        | Encodes claims and can be used for both auth and authorization |
+| **Use Cases**         | Delegated access                               | Single sign-on (SSO)                         | Stateless authentication and authorization    |
+
+In summary, OAuth 2.0 provides a framework for authorization, OpenID Connect extends this framework by adding authentication capabilities through ID tokens (often in JWT format), while JWT serves as a versatile token format that can be utilized within both OAuth 2.0 and OIDC implementations. Each component plays a critical role in securing modern web applications and services.
+
+Citations:
+[1] https://www.jbspeakr.cc/jwt-vs-oauth/
+[2] https://supertokens.com/blog/openid-connect-vs-oauth2
+[3] https://stackoverflow.com/questions/39909419/what-are-the-main-differences-between-jwt-and-oauth-authentication
+[4] https://guptadeepak.com/demystifying-jwt-oauth-oidc-and-saml-a-technical-guide/
+[5] https://referbruv.com/blog/authentication-vs-authorization-oauth-openid-and-jwt-explained/
