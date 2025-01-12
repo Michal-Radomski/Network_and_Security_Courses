@@ -1,0 +1,50 @@
+Web security, internet security, and network security are interconnected yet distinct areas within the broader field of cybersecurity. Understanding their differences is crucial for implementing effective protective measures.
+
+## Web Security
+
+**Definition**: Web security focuses on protecting websites and web applications from various threats, including attacks like phishing, SQL injection, and cross-site scripting. Its primary goal is to ensure the integrity, confidentiality, and availability of web-based services.
+
+**Key Features**:
+- **Firewalls**: Filter malicious traffic.
+- **SSL Encryption**: Secures data transmission.
+- **User Authentication**: Ensures only authorized users access web resources.
+
+## Internet Security
+
+**Definition**: Internet security encompasses a wider range of protective measures for all online activities, including email communications and online banking. It addresses threats that can affect any activity conducted over the internet.
+
+**Key Features**:
+- **Malware Protection**: Defends against malicious software.
+- **Phishing Prevention**: Protects users from scams.
+- **Network Security Measures**: Includes firewalls and intrusion detection systems.
+
+## Network Security
+
+**Definition**: Network security is a subset of cybersecurity focused specifically on protecting computer networks from internal and external threats. It involves implementing measures to prevent unauthorized access, misuse, or theft of network resources.
+
+**Key Features**:
+- **Access Control**: Ensures only authorized users can access network resources.
+- **Intrusion Detection Systems (IDS)**: Monitors network traffic for suspicious activity.
+- **Firewalls and VPNs**: Protect data in transit and secure remote access.
+
+## Comparison
+
+| Aspect                | Web Security                                     | Internet Security                               | Network Security                                   |
+|-----------------------|--------------------------------------------------|------------------------------------------------|---------------------------------------------------|
+| **Scope**             | Protects websites and web applications           | Protects all online activities                  | Protects computer networks                         |
+| **Focus Areas**       | Website vulnerabilities, user authentication     | Data integrity, malware protection              | Network infrastructure, access control            |
+| **Threats Addressed** | Phishing, DDoS attacks                          | Malware, phishing                               | Unauthorized access, cyberattacks                 |
+
+In summary, while web security is concerned with the safety of web applications, internet security covers a broader spectrum of online activities. Network security specifically focuses on safeguarding the underlying infrastructure that supports these activities. Each area plays a vital role in maintaining overall cybersecurity.
+
+Citations:
+[1] https://onlinedegrees.sandiego.edu/cyber-security-information-security-network-security/
+[2] https://en.wikipedia.org/wiki/Network_security
+[3] https://www.cisco.com/c/en/us/products/security/what-is-network-security.html
+[4] https://www.ibm.com/think/topics/network-security
+[5] https://www.checkpoint.com/cyber-hub/network-security/what-is-network-security/
+[6] https://www.comptia.org/content/guides/network-security-basics-definition-threats-and-solutions
+[7] https://nordlayer.com/learn/network-security/what-is-network-security/
+[8] https://www.proofpoint.com/us/threat-reference/cybersecurity-network-security
+[9] https://www.fortinet.com/resources/cyberglossary/what-is-network-security
+[10] https://www.geeksforgeeks.org/difference-between-network-security-and-cyber-security/
