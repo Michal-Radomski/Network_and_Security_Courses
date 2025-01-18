@@ -234,3 +234,77 @@ its own advantages and use cases, so choose the one that best fits your applicat
 Citations: [1] https://www.npmjs.com/package/@crmackey/fernet [2] https://github.com/zoran-php/fernet-nodejs [3]
 https://cryptography.io/en/latest/fernet/ [4]
 https://docs.redhat.com/en/documentation/red_hat_openstack_platform/11/html-single/deploy_fernet_on_the_overcloud/index
+
+## Overview of Reference Tokens and Self-Encoded Tokens
+
+In the context of OAuth 2.0 and API security, tokens play a crucial role in managing user authentication and authorization.
+The two primary types of tokens are **Reference Tokens** and **Self-Encoded Tokens** (often represented as JSON Web Tokens or
+JWTs). Each type has distinct characteristics, advantages, and use cases.
+
+## Reference Tokens
+
+eg: abc123xyz456def789
+
+**Definition**: Reference tokens are unique identifiers that point to stored information about the user's session or
+permissions in a database.
+
+### Characteristics:
+
+- **Storage Requirement**: Reference tokens require server-side storage, as they do not contain user information themselves
+  but rather reference it in a database[1].
+- **Revocation**: They can be easily revoked by deleting the corresponding entry in the database, making it straightforward
+  to manage user sessions[1].
+- **Operations**: They allow for various operations like listing active tokens or querying user permissions directly from the
+  database[1].
+
+### Advantages:
+
+- **Revocation Control**: Since they are stored on the server, administrators can revoke access tokens immediately when
+  necessary.
+- **Security**: They minimize the risk of exposing sensitive information since the token itself does not contain any user
+  data[2].
+
+### Disadvantages:
+
+- **Performance Overhead**: Each request involving a reference token may require a lookup in the database, which can
+  introduce latency, especially under high-load conditions[2].
+- **Scalability Issues**: For larger applications with many users, maintaining a database of active tokens can become
+  cumbersome.
+
+## Self-Encoded Tokens (JWT)
+
+**Definition**: Self-encoded tokens, particularly JWTs, encapsulate all necessary information within the token itself. This
+includes claims about the user and their permissions.
+
+### Characteristics:
+
+- **Statelessness**: JWTs do not require server-side storage; they are self-contained and can be verified without a database
+  lookup[2].
+- **Structure**: A JWT consists of three parts: a header, a payload (which contains claims), and a signature. The payload is
+  encoded but not encrypted by default, allowing anyone with the token to read its contents[3].
+- **Revocation Complexity**: Revoking a JWT is more complex since it typically involves implementing additional mechanisms
+  (like blacklisting) to track invalidated tokens[2].
+
+### Advantages:
+
+- **Reduced Latency**: Since no database lookup is needed for each request, JWTs can improve performance in distributed
+  systems where multiple services need to validate tokens independently[2].
+- **Scalability**: They are well-suited for large applications where managing state on the server would be impractical[1].
+
+### Disadvantages:
+
+- **Security Risks**: If sensitive information is included in the payload without encryption, it can be exposed to anyone who
+  possesses the token. Therefore, care must be taken not to include sensitive data unless encrypted[2][3].
+- **Revocation Challenges**: The inability to easily revoke individual tokens can lead to security vulnerabilities if a token
+  is compromised.
+
+## Conclusion
+
+The choice between reference tokens and self-encoded tokens largely depends on the specific needs of an application.
+Reference tokens offer easier revocation and enhanced security for sensitive data but come with performance trade-offs due to
+their reliance on server-side storage. In contrast, self-encoded tokens like JWTs provide scalability and reduced latency but
+require careful management of sensitive information and revocation processes. Understanding these differences is crucial for
+implementing effective authentication and authorization strategies in modern applications.
+
+Citations: [1] https://leocode.com/development/oauth-2-0-authentication/ [2] https://zitadel.com/blog/jwt-vs-opaque-tokens
+[3] https://auth0.com/blog/id-token-access-token-what-is-the-difference/
