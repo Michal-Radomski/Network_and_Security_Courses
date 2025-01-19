@@ -308,3 +308,61 @@ implementing effective authentication and authorization strategies in modern app
 
 Citations: [1] https://leocode.com/development/oauth-2-0-authentication/ [2] https://zitadel.com/blog/jwt-vs-opaque-tokens
 [3] https://auth0.com/blog/id-token-access-token-what-is-the-difference/
+
+The differences between refresh tokens, ID tokens, and access tokens are fundamental to understanding how authentication and
+authorization work in modern applications, especially within frameworks like OAuth 2.0 and OpenID Connect. Here’s a detailed
+comparison:
+
+## 1. Access Token
+
+- **Purpose**: Access tokens are used to authorize requests to protected resources, such as APIs. They allow the client
+  application to access these resources on behalf of the user.
+- **Content**: Typically, access tokens are short-lived and may be in the form of a JWT (JSON Web Token), which can contain
+  claims about the user and permissions.
+- **Lifespan**: Access tokens usually have a short lifespan, often ranging from a few minutes to a couple of hours. This
+  short duration minimizes security risks if the token is compromised[1][2].
+- **Usage**: When making API calls, the client includes the access token in the request header (usually as a Bearer token) to
+  authenticate itself.
+
+## 2. Refresh Token
+
+- **Purpose**: Refresh tokens are used to obtain new access tokens without requiring user re-authentication. They help
+  maintain a seamless user experience by allowing long-lived sessions[1][3].
+- **Content**: Refresh tokens do not carry user information or permissions; they are simply used to request new access
+  tokens.
+- **Lifespan**: Refresh tokens generally have a longer lifespan than access tokens, often lasting days, weeks, or even
+  months. For example, some systems set refresh token lifetimes to 90 days[1][4].
+- **Usage**: When an access token expires, the client can use the refresh token to request a new access token from the
+  authorization server without needing the user's credentials again.
+
+## 3. ID Token
+
+- **Purpose**: ID tokens are primarily used for authentication and contain information about the user (identity claims) that
+  is verified by the identity provider.
+- **Content**: ID tokens are usually structured as JWTs and include claims such as the user's identity, authentication time,
+  and other metadata[5][6].
+- **Lifespan**: The lifespan of ID tokens can vary but is generally aligned with that of access tokens; they are often
+  short-lived.
+- **Usage**: ID tokens are returned during the authentication process and can be used by the client application to understand
+  who the user is and whether they have been authenticated successfully.
+
+## Summary of Differences
+
+| Feature           | Access Token                         | Refresh Token                         | ID Token                              |
+| ----------------- | ------------------------------------ | ------------------------------------- | ------------------------------------- |
+| **Purpose**       | Authorizes access to resources       | Obtains new access tokens             | Authenticates user identity           |
+| **Content**       | May contain claims about permissions | Opaque; does not carry user info      | Contains identity claims              |
+| **Lifespan**      | Short-lived (minutes to hours)       | Long-lived (days to months)           | Short-lived (similar to access token) |
+| **Usage Context** | Used in API calls                    | Used to refresh expired access tokens | Used to verify user identity          |
+
+In summary, while all three types of tokens play crucial roles in authentication and authorization processes, they serve
+distinct purposes and have different characteristics that make them suitable for their respective roles in secure application
+environments.
+
+Citations: [1] https://dev.to/rahulvijayvergiya/access-tokens-vs-refresh-tokens-vs-id-tokens-3c97 [2]
+https://www.geeksforgeeks.org/access-token-vs-refresh-token-a-breakdown/ [3]
+https://www.descope.com/blog/post/access-token-vs-refresh-token [4]
+https://www.c-sharpcorner.com/article/accesstoken-vs-id-token-vs-refresh-token-what-whywhen/ [5]
+https://www.datawiza.com/blog/technical/understanding-id-token-access-token-and-refresh-token-in-openid-connect-oidc/ [6]
+https://auth0.com/blog/id-token-access-token-what-is-the-difference/ [7] https://oauth.net/id-tokens-vs-access-tokens/ [8]
+https://cloud.google.com/docs/authentication/token-types
